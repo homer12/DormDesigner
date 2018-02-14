@@ -1,4 +1,4 @@
-public class CreateBedButton {
+public class CreateSofaButton {
     private static final int WIDTH = 96;
     private static final int HEIGHT = 32;
 
@@ -6,12 +6,12 @@ public class CreateBedButton {
     private float[] position;
     private String label;
 
-    public CreateBedButton(float x, float y, PApplet processing) {
+    public CreateSofaButton(float x, float y, PApplet processing) {
         position = new float[2];
-        position[0] = x;    //50
+        position[0] = x;    //150
         position[1] = y;    //24
         this.processing = processing;
-        label = "Create Bed";
+        label = "Create Sofa";
     }
 
     public void update() {
@@ -29,11 +29,10 @@ public class CreateBedButton {
         processing.fill(0);
         // Draw label
         processing.text(label,position[0],position[1]);
-
     }
 
     public Furniture mouseDown() { // After step 10, this method will instead return Furniture
-        return new Furniture("bed",processing);
+        return new Furniture("sofa",processing);
     }
 
     public boolean isMouseOver() {
