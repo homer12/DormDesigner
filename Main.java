@@ -4,6 +4,8 @@ public class Main {
     private Furniture[] furni;
     private CreateBedButton bedButton;
     private CreateSofaButton sofaButton;
+    private SaveButton saveButton;
+    private LoadButton loadButton;
 
     public Main(PApplet processing) {
         this.processing = processing;
@@ -36,6 +38,12 @@ public class Main {
 
         // Sofa Button
         sofaButton = new CreateSofaButton(150,24,processing);
+
+        // Save Button
+        saveButton = new SaveButton(650,24,processing);
+
+        // Load Button
+        loadButton = new LoadButton(750,24,processing);
     }
 
     public void update(){
@@ -59,6 +67,12 @@ public class Main {
 
         // Update sofa button
         sofaButton.update();
+
+        // Update save button
+        saveButton.update();
+
+        // Update load button
+        loadButton.update();
     }
 
 
