@@ -29,7 +29,11 @@ public class SaveButton {
         processing.fill(0);
         // Draw label
         processing.text(label,position[0],position[1]);
+    }
 
+
+    public Furniture mouseDown( String type, float x, float y, int rotat, PApplet processing ){
+        return new Furniture(type,x,y,rotat,processing);
     }
 
 

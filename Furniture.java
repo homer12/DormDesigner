@@ -25,6 +25,20 @@ public class Furniture {
         this.type = type;
     }
 
+    // Overload the constructor
+    public Furniture(String type, float x, float y, int rotat, PApplet processing){
+        this.processing = processing;
+        image = processing.loadImage("images/"+type+".png");
+        position = new float[2];
+        position[0] = x;
+        position[1] = y;
+        isDragging = false;
+        deltaX = 0;
+        deltaY = 0;
+        rotations = rotat;
+        this.type = type;
+    }
+
     // draws this bed at its current position
     public void update() {
         if( isDragging ){
