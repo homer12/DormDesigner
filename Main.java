@@ -212,7 +212,7 @@ public class Main {
 
                 for(int i = 0; i< furni.length; i++ ){
                     if( furni[i] == null ){
-                        Furniture f = saveButton.mouseDown(furniType,x,y,rotat,processing);
+                        Furniture f = loadButton.mouseDown(furniType,x,y,rotat,processing);
                         if( f != null )    // If it's not null
                             furni[i] = f;
                         break;

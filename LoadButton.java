@@ -32,6 +32,9 @@ public class LoadButton {
 
     }
 
+    public Furniture mouseDown( String type, float x, float y, int rotat, PApplet processing ){
+        return new Furniture(type,x,y,rotat,processing);
+    }
 
 
     public boolean isMouseOver() {
